@@ -38,7 +38,6 @@ def add_gaussian_noise(X_imgs, datasetType):
     except Exception as ex:
         print('')
 
-
 def central_scale_images(X_imgs, scales,datasetType):
     # Various settings needed for Tensorflow operation
     boxes = np.zeros((len(scales), 4), dtype=np.float32)
@@ -89,7 +88,6 @@ def rotate_images(X_imgs, start_angle, end_angle, n_images,datasetType):
     imagePath = "dataset/" + datasetType + "/" + "rotated_image"
     save_augmented_images(X_rotate, imagePath)
 
-
 def flip_images(X_imgs,datasetType):
     X_flip = []
     tf.reset_default_graph()
@@ -106,7 +104,6 @@ def flip_images(X_imgs,datasetType):
 
     imagePath = "dataset/" + datasetType + "/" + "flipped_image"
     save_augmented_images(X_flip, imagePath)
-
 
 def tf_resize_images(datasetType):
     X_data = []
